@@ -4,7 +4,7 @@ st.set_page_config(page_title = "AI Interview Assistant", page_icon = '🫡', la
 st.title("AI Interview Asssitant ")
 st.caption(" it is a platform for getting information")
 try:
-  client = Groq(api_key = st.secrets["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"])
+  client = Groq(api_key = st.secrets["GROQ_API_KEY"])
 except (KeyError, FileNorFound):
                 st.error("API Key is missing . Add it in Advance setting")
                 st.stop()
