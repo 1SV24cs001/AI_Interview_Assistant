@@ -8,5 +8,8 @@ try:
 except (KeyError, FileNorFound):
                 st.error("API Key is missing . Add it in Advance setting")
                 st.stop()
-  
-  role = st.selectbox(Job Title',[Machine Learning Engineer','senior Software Engineer','Data Analyst','Prompt Engineer','Devops Engineer','other'])
+role = st.selectbox("JOB TITLE", ['software engineer','senior software engineer', 'data analyst','prompt engineer', 'Devops engineer', 'other'])
+if role == "other":
+  st.text_input("Enter your job title ","XXXXXXX")
+role = st.selectbox("model", ['openai/gpt-oss-safeguard-20b', 'openai/gpt-oss-120b'])
+role = st.selectbox("difficult level", ['bigginer','intermidiate','advance'])
