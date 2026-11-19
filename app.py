@@ -39,10 +39,11 @@ if st.button("Generate AI Response", type = "primary"):
   background = "job role :" + role + "difficult levet " + level
   with st.spinner(" generating your answer .... "):
     try:
-       response = client.chat.completions.create(
+      response = client.chat.completions.create(
          model = gen_model,
          messages = [{"role":"system","content":"Act as a senoir interviewer , both HR and technicall expert"},
                      {"role" : "user",
                      "content" : backgroound + task }],
          temprature = 0.7,
          max_tokens = 2000
+       )
